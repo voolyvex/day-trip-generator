@@ -10,23 +10,18 @@ def generate_day_trip():
     print_current_trip()
 
 def print_current_trip():
-    print("Destination: ", get_random_destination())
-    # print("Restaurant: ", get_random_restaurant())
-    # print("Mode of transportation: ", get_random_transportation())
-    # print("Entertainment: ", get_random_entertainment())
+    print("Destination: ", get_random_element(destinations))
+    print("Restaurant: ", get_random_element(restaurants))
+    print("Mode of transportation: ", get_random_element(transportation))
+    print("Entertainment: ", get_random_element(entertainment))
 
 
-def get_random_destination(destinations):
-    random_list_index = random.randrange(0, 5)
-    return(destinations[random_list_index])
-def get_random_restaurant():
-    pass
-def get_random_transportation():
-    pass
-def get_random_entertainment():
-    pass
+def get_random_element(from_list):
+    random_list_index = random.randint(len(from_list))
+    return(from_list[random_list_index])
+
 def print_final_trip():
-    pass
+    print ("Here is your trip!")
 
 if __name__ == "__main.py__":
     generate_day_trip()
