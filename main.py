@@ -11,16 +11,16 @@ def generate_day_trip():
 
 def print_current_trip():
     print("Destination: ", get_random_destination())
-    print("Restaurant: ", get_random_restaurant())
-    print("Mode of transportation: ", get_random_transportation())
-    print("Entertainment: ", get_random_entertainment())
+    # print("Restaurant: ", get_random_restaurant())
+    # print("Mode of transportation: ", get_random_transportation())
+    # print("Entertainment: ", get_random_entertainment())
 
 
+def get_random_destination(destinations):
+    random_list_index = random.randrange(0, 5)
+    return(destinations[random_list_index])
 def get_random_restaurant():
     pass
-def get_random_destination():
-    random_list_index = random.randrange(0, len(destinations))
-    return(destinations[random_list_index])
 def get_random_transportation():
     pass
 def get_random_entertainment():
