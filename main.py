@@ -1,10 +1,10 @@
 import random
 
+current_trip = []
 destinations = ["Shore Acres, Oregon", "Antarctica", "Golden Gate State Park", "Preparation Canyon", "Google Headquarters", "Chicago", "Boston", "Italy", "Little Italy", "Hawaiian island", "Aruba", "Kyoto, Japan", "Paris", "Iceland"]
 restaurants = ["4-star Michelin restaurant", "Bad Thai", "Taco Shelf", "Chunky Chicken Burgers", "La Buvette", "Panda Express", "Zio's Pizza", "La Casa", "El Mexican Restaurant", "Bangkok Thai Cuisine", "Matsu Sushi", "picnic lunch"]
 transportation = ["bicycle", "train", "walking", "Uber", "school bus", "limousine", "skateboard", "kayak", "plane", "snowboard", "taxi", "motorcycle", "horseback", "riding lawnmower"]
 entertainment = ["art museum", "nature hike", "ballet", "concert", "dance club", "karaoke", "video game arcade", "miniature golf", "go to a movie", "science fair", "shopping", "architecture tour", "zoo", "bowling", "beach day", "puppet show"]
-current_trip = []
 
 def generate_day_trip():
     get_current_trip()
@@ -38,11 +38,11 @@ def change_current_trip():
     user_satisfaction_logic()
 
 def print_current_trip():
+    print()
     print("Destination: " + current_trip[0])
     print("Restaurant: " + current_trip[1])
     print("Mode of transportation: " + current_trip[2])
     print("Entertainment: " + current_trip[3])
-
 
 def user_satisfaction_logic():
     user_satisfied = input("Are you happy with this day trip? (y/n): ").strip().lower()
